@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/login.css') }}">
+    <title>Login</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="pagina">
+
+        <span class="fundo-animado"></span>
+        <span class="fundo-animado2"></span>
+
+        <div class="formularios login">
+            <h2 class="animacao" style="--i:0; --j:21;">Login</h2>
+            <form action="/login" method="POST">
+                <div class="input-container animacao" style="--i:1; --j:22;">
+                    <input type="email" name="email" required>
+                    <label>Email</label>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-container animacao" style="--i:2; --j:23;">
+                    <input type="password" name="password" id="login-password" required>
+                    <label>Senha</label>
+                    <i class='bx bx-hide' onclick="verSenha('login-password', this)"></i>
+                    <p><a href="#" class="esqueceu-senha-link">Esqueceu sua Senha?</a></p>
+                </div>
+                <button type="submit" class="btn animacao" style="--i:3; --j:24;">Login</button>
+                <div class="link-login animacao" style="--i:4; --j:25;">
+                    <p>Não possui um cadastro? <a href="#" class="registrar-link">Registre-se</a></p>
+                </div>
+                
+            </form>
+        </div>
+
+        <div class="texto login">
+            <h2 class="animacao" style="--i:0; --j:20;">Bem Vindo(a)!</h2>
+            <p class="animacao" style="--i:1; --j:21;">Estamos felizes em recebê-lo(a) de volta!</p>
+        </div>
+
+        <div class="formularios registrar">
+            <h2 class="animacao" style="--i:17; --j:0;">Registrar</h2>
+            <form action="/registrar" method="POST">
+                <div class="input-container animacao" style="--i:18; --j:1;">
+                    <input type="text" name="usuario" required>
+                    <label>Nome de Usuário</label>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-container animacao" style="--i:19; --j:3;">
+                    <input type="email" name="email" required>
+                    <label>Email</label>
+                    <i class='bx bxs-envelope'></i>
+                </div>
+                <div class="input-container animacao" style="--i:20; --j:4;">
+                    <input type="password" name="password" id="registro-password" required>
+                    <label>Senha</label>
+                    <i class='bx bx-hide' onclick="verSenha('registro-password', this)"></i>
+                </div>
+                <button type="submit" class="btn animacao" style="--i:21; --j:5;">Registrar</button>
+                <div class="link-login animacao" style="--i:22;">
+                    <p>Já possui uma conta? <a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="texto registrar">
+            <h2 class="animacao" style="--i:17; --j:0;">Bem Vindo(a)!</h2>
+            <p class="animacao" style="--i:18; --j:1;">É um prazer ter você conosco!</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts/animacao.js') }}"></script>
+</body>
+</html>

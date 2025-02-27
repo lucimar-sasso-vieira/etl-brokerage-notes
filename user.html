@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload de Arquivos</title>
+    <link rel="stylesheet" href="../static/styles/user.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav>
+        <div>
+            
+        </div>
+    </nav>
+
+    
+
+    <nav class="navBar">
+        <div class="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="nav-links">
+            <a href="#">Cálculo IR</a>
+            <a href="#">Outros Serviços</a>
+        </div>
+        <div class="user-options">  
+            <i class='bx bxs-user'></i>
+            <a>Usuário</a>
+            <ul class="dropdown">
+                <li class="user-info">Informações do usuário</li>
+                <li class="configs">Configurações</li>
+                <li class="logout">Desconectar</li>
+            </ul>
+        </div>
+    </nav>
+    <div class="uploadFilesContainer" id="div">
+        <form action="" class="uploadFiles" id="uploadForm" method="POST">
+            <div class="uploadBox" id="uploadBox">
+                <input type="file" class="fileInput" id="fileInput" multiple hidden accept="application/pdf">
+                <p class="inputText1">Arraste suas notas aqui para carregá-las</p>
+                <p class="inputText2">Ou <a id="selectFile">escolha seus arquivos</a></p>
+            </div>
+            <ul class="filesList" id="fileList"></ul>
+            <div class="btns">
+                <button type="button" class="salvar" id="saveButton">Salvar</button>
+                <button type="button" class="cancelar" id="cancelButton">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../static/scripts/user.js"></script>
+</body>
+</html>
